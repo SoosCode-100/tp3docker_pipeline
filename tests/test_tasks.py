@@ -1,19 +1,21 @@
 import sys
 import os
 
+from matplotlib.pylab import add
+
 from app import tasks
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../app")))
 
 def test_add_task():
-    add_task("Learn Docker")
-    assert "Learn Docker" in add_task.task
+    tasks.add_task("Learn Docker")
+    assert "Learn Docker" in tasks.get_tasks()
 
 def test_multiple_tasks():
-    add_task("Lean CI")
-    add_task("Learn Devops")
-    
-    tasks=get_tasks()
+    tasks.add_task("Learn CI")
+    tasks.add_task("Learn Devops")
+
+    tasks=tasks.get_tasks()
 
     assert "Learn CI" in tasks
     assert "Learn Devops" in tasks
