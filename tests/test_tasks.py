@@ -1,8 +1,6 @@
 import sys
 import os
 
-from matplotlib.pylab import add
-
 from app import tasks
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../app")))
