@@ -17,5 +17,10 @@ def test_multiple_tasks():
 
     assert "Learn CI" in tasks1
     assert "Learn Devops" in tasks1
+
+def test_clear_task():
+    tasks.add_task("Learn Kubernetes")
+    tasks.clear_task("Learn Kubernetes")
+    assert "Learn Kubernetes" not in tasks.get_tasks()
 #please work
 # wifi attempts sabotage
