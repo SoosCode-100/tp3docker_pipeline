@@ -13,7 +13,7 @@ def test_multiple_tasks():
     tasks.add_task("Learn CI")
     tasks.add_task("Learn Devops")
 
-    tasks=tasks.get_tasks()
+    tasks1=tasks.get_tasks()
 
-    assert "Learn CI" in tasks
-    assert "Learn Devops" in tasks
+    assert "Learn CI" in tasks1
+    assert "Learn Devops" in tasks1
